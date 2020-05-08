@@ -12,5 +12,6 @@ if ($con) {
 if(mysqli_connect_errno()){
 	echo "Failed to connect:". mysqli_connect_errno();
 }//errno 把錯誤碼放在裡面
+//888
 
   ?>
