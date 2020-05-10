@@ -99,8 +99,9 @@ function Audio() {
 			updateTimeProgressBar(this);
 
 		}
-		// updateTime(this);
-		updateLyric(this);
+		// updateLyric(this);
+		// getLyric(this);
+		// updateTime(this) ;
 		
 
 

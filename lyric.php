@@ -1,13 +1,30 @@
 <?php
 include("includes/includedFiles.php");
+
 ?>
 
 
 <script>
+	function getLyric(audio) {
+		$.post("includes/handlers/ajax/getLyricJson.php", { songId: audioElement.currentlyPlaying.id,time: audio.currentTime },function(data) {
+			console.log(data);
+
+
+			// var track = JSON.parse(data);
+			// $(".pig span").text(track.word);
+
+		
+		
+		});	
+
+
+	}
+		
+
 
 
 function updateTime(audio) {
-	$(".aaa #time").text(audio.currentTime);
+	$(".aaa #currentTime").text(audio.currentTime);
 	$(".aaa #songId").text(audioElement.currentlyPlaying.id);	}
 
 
@@ -102,7 +119,7 @@ function updateTime(audio) {
         if(audio.currentTime >= 36 + 145.000000){
 			$("#c9").show();
          	}
-                  if(audio.currentTime >= 36 + 147.000000){
+        if(audio.currentTime >= 36 + 147.000000){
 			$("#d0").show();
          	}
         if(audio.currentTime >= 36 + 151.000000){
@@ -157,6 +174,11 @@ function updateTime(audio) {
 
 </script>
 <body>
+	<div class="aaa">
+		<div id="songId"></div>
+		<div id="currentTime"></div>
+		
+	</div>
 	<div class="lyric">
 		<div class="word" id="a1">書裡總愛寫到喜出望外的傍晚</div>
 		<div class="word" id="a2">騎的單車還有他和她的對談</div>
@@ -202,6 +224,9 @@ function updateTime(audio) {
 		<div class="word" id="e2">慢慢的陪你慢慢的老去</div>
 		<div class="word" id="e3">因為慢慢是個最好的原因</div>
 		<div class="word" id="e4">書裡總愛寫到喜出望外的傍晚</div>
+	</div>
+	<div class="pig">
+		<span>55</span>
 	</div>
 </body>
 
