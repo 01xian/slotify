@@ -1,5 +1,5 @@
-<?php
-include("../../config.php");
+
+<?php include("../../config.php");
 if(isset($_POST['name']) && isset($_POST['username'])) {
 	$name = $_POST['name'];
 	$username = $_POST['username'];

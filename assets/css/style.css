@@ -425,5 +425,81 @@ input:focus{
 	margin:40px auto ;
 	text-align: center;
 }
+.optionsMenu {
+	position: fixed;
+	background-color: #282828;
+	width: 200px;
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 3px;
+	z-index: 1000;
+	display: none;
+
+}
+.optionsMenu .item {
+	width: 100%;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	font-weight: 400;
+	color: rgba(147,147,147,0.8);
+	cursor: pointer;
+	height: 40px;
+	background-color: #282828;
+	font-size: 14px;
+}
+
+.optionsMenu .item:hover {
+	color: #fff;
+	background-color: #333;
+	border-color: #333;
+}
+
+.optionsMenu select {
+	border: none;
+	-webkit-appearance:  none;/*原本預設的select會有上下箭頭，加了就會消失。
+	WebKit是目前主流的移動瀏覽器渲染引擎，主要設計是用來讓網頁瀏覽器繪製網頁。
+	WebKit目前作為AppleSafari及Google Chrome（直到版本27）等瀏覽器的主要引擎。*/
+	-moz-appearance:  none;/*和上面一樣,for Firefox*/
+
+
+	
+}
+.userInfo h1{
+	text-align: center;
+}
+
+.userDetails{
+	padding: 20px;
+}
+
+.userDetails .container h2{
+	text-align: center;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container .button{
+	display: block;
+	margin: 16px auto;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"]{
+	height: 50px;
+	width: 100%;
+	background-color: #1f1f1f;
+	border:none;
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0 20px; 
+
+}
+
+.userDetails .container .message{
+color: #2ebd59;
+font-weight: 300;
+}
+
+
+
 
 
