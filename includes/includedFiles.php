@@ -7,8 +7,8 @@ if(isset($_SERVER['HTTP_X_REQUESTED_WITH'])){
 	include("includes/classes/Album.php");
 	include("includes/classes/Song.php");
 	include("includes/classes/Playlist.php");
-	/*from header.php,
-	index現在沒有header&footer,這裡為什麼不需要header&footer,*/
+	/*from header.php*/
+	
 
 	if (isset($_GET['userLoggedIn'])) {
 		$userLoggedIn = new User($con, $_GET['userLoggedIn']);

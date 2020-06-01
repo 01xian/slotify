@@ -3,9 +3,7 @@
 include("includes/config.php");
 include("includes/classes/Account.php");
 include("includes/classes/Constants.php");
-$account = new Account($con);//傳遞變數$con?
-
-
+$account = new Account($con);
 include("includes/handlers/register-handler.php");
 include("includes/handlers/login-handler.php");
 
@@ -55,19 +53,19 @@ function getInputValue($name){
   		<div id="loginContainer">
 		    <div id="inputContainer">
 			    <form id="loginForm" action="register.php" method="POST">
-			    	<h2>Login to your account</h2>
+			    	<h2>登入</h2>
 			    	<p>
 			    		<?php echo $account->getError(Constants::$loginFailed);?>
-			    		<label for="loginUsername">Username</label>
-			    		<input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. barSimpson" value="<?php getInputValue('loginUsername') ?>" required>
+			    		<label for="loginUsername">使用者名稱:</label>
+			    		<input id="loginUsername" name="loginUsername" type="text" placeholder="輸入使用者名稱" value="<?php getInputValue('loginUsername') ?>" required>
 			    	</p>
 			    	<p>
-			    		<label for="loginPassword">Password</label>
-			    		<input id="loginPassword" name="loginPassword" type="Password" placeholder="Your password"  required>
+			    		<label for="loginPassword">密碼:</label>
+			    		<input id="loginPassword" name="loginPassword" type="Password" placeholder="輸入密碼"  required>
 			    	</p>
-			    	<button type="submit" name="loginButton">LOG IN</button>
+			    	<button type="submit" name="loginButton">登入</button>
 			    	<div class="hasAccountText">
-			    		<span id="hideLogin">Don't have account yet? Signup here.</span>
+			    		<span id="hideLogin">還沒有註冊嗎? 請按這裡</span>
 			    	</div>
 			    </form> 
 		    
@@ -75,22 +73,24 @@ function getInputValue($name){
 
 
 				 <form id="registerForm" action="register.php" method="POST">
-				    	<h2>Create your free account</h2>
+				    	<h2>註冊免費的帳號</h2>
 				    	<p>
 				    		<?php echo $account->getError(Constants::$usernameCharacters);?>
 				    		<?php echo $account->getError(Constants::$usernameTaken);?>
-				    		<label for="username">Username</label>
-				    		<input id="username" name="username" type="text" placeholder="e.g. barSimpson" value="<?php getInputValue('username') ?>"required>
+				    		<label for="username">使用者名稱</label>
+				    		<input id="username" name="username" type="text" placeholder="輸入使用者名稱" value="<?php getInputValue('username') ?>"required>
 				    	</p>
-				    	<p>
-				    		<?php echo $account->getError(Constants::$firstNameCharacters);?>
-				    		<label for="firstName">First name</label>
-				    		<input id="firstName" name="firstName" type="text" placeholder="e.g. Bart" value="<?php getInputValue('firstName') ?>" required>
-				    	</p>
+				    
 				    	<p>
 				    		<?php echo $account->getError(Constants::$lastNameCharacters);?>
-				    		<label for="lastName">Last name</label>
-				    		<input id="lastName" name="lastName" type="text" placeholder="e.g. Simpson" value="<?php getInputValue('lastName') ?>"  required>
+				    		<label for="lastName">姓氏</label>
+				    		<input id="lastName" name="lastName" type="text" placeholder="輸入姓氏" value="<?php getInputValue('lastName') ?>"  required>
+				    	</p>
+
+				    	<p>
+				    		<?php echo $account->getError(Constants::$firstNameCharacters);?>
+				    		<label for="firstName">名字</label>
+				    		<input id="firstName" name="firstName" type="text" placeholder="輸入名稱" value="<?php getInputValue('firstName') ?>" required>
 				    	</p>
 
 				    	<p>
@@ -98,27 +98,27 @@ function getInputValue($name){
 				    		<?php echo $account->getError(Constants::$emailInvalid);?>
 				    		<?php echo $account->getError(Constants::$emailTaken);?>
 				    		<label for="email">Email</label>
-				    		<input id="email" name="email" type="email" placeholder="e.g. bar@gmail.com" value="<?php getInputValue('email') ?>" required>
+				    		<input id="email" name="email" type="email" placeholder="bar@gmail.com" value="<?php getInputValue('email') ?>" required>
 				    	</p>
 
 				    	<p>
-							<label for="email2">Confirm email</label>
-							<input id="email2" name="email2" type="email" placeholder="e.g. bart@gmail.com" value="<?php getInputValue('email2') ?>" required>
+							<label for="email2">確認 email</label>
+							<input id="email2" name="email2" type="email" placeholder="bart@gmail.com" value="<?php getInputValue('email2') ?>" required>
 						</p>
 				    	<p>
 				    		<?php echo $account->getError(Constants::$passwordsDoNoMatch);?>
 				    		<?php echo $account->getError(Constants::$passwordNotAlphanumeric);?>
 				    		<?php echo $account->getError(Constants::$passwordCharacters);?>
-				    		<label for="password">Password</label>
-				    		<input id="password" name="password" type="password" placeholder="Your password"  required>
+				    		<label for="password">密碼</label>
+				    		<input id="password" name="password" type="password" placeholder="輸入密碼"  required>
 				    	</p>
 				    	<p>
-				    		<label for="password2">Confirm password</label>
-				    		<input id="password2" name="password2" type="password" placeholder="Your password" required>
+				    		<label for="password2">確認密碼</label>
+				    		<input id="password2" name="password2" type="password" placeholder="確認密碼" required>
 				    	</p>
-				    	<button type="submit" name="registerButton">SIGN UP</button>
+				    	<button type="submit" name="registerButton">註冊</button>
 				    	<div class="hasAccountText">
-			    		<span id="hideRegister">Already have an account? Log in here.</span>
+			    		<span id="hideRegister">已經有帳號了嗎? 按這裡登入.</span>
 			    	</div>
 				    </form> 
 		    </div>

@@ -1,7 +1,8 @@
 <?php 
 include("includes/includedFiles.php");
 if(isset($_GET['term'])) {
-	$term = urldecode($_GET['term']);/*解碼的動作,改善空白會變%20的問題*/
+	$term = urldecode($_GET['term']);
+	/*解碼的動作。(改善空白會變%20的問題)*/
 
 }
 else{
@@ -31,7 +32,6 @@ else{
         var search = $(".searchInput").val();
         $(".searchInput").val('');
         $(".searchInput").val(search);
-        /*上面四行是我上網查的，因為這一行onfocus="this.value = this.value無作用*/
         
 	})
 

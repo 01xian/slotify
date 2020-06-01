@@ -18,7 +18,7 @@ function sanitizeFormString($inputText){
 	$inputText = str_replace(" ","",$inputText);
 	//把第三格字串裡所有第一格東西換成第二格,這裡就是把空白拿掉
 	$inputText = ucfirst(strtolower($inputText));
-	//ucfirst("  ");首字轉大寫。strtolower(" ")轉小寫
+	//ucfirst("  ")首字轉大寫。strtolower(" ")轉小寫
 	return $inputText;
 }
 

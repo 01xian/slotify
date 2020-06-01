@@ -81,7 +81,8 @@ function openPage(url) {
 	var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
 	$("#mainContent").load(encodedUrl);
 	$("body").scrollTop(0);/*改變頁面時會自動捲到上面*/
-	history.pushState(null, null, url);/*(有歷史紀錄)且通过pushState可改变URL而不刷新页面 
+	history.pushState(null, null, url);
+	/*(有歷史紀錄)且通过pushState可改变URL而不刷新页面 
 	(change pages without reload the page)(會讓網址有變化，但不會真的去載入) */
 }
 
