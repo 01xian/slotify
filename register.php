@@ -53,7 +53,7 @@ function getInputValue($name){
   		<div id="loginContainer">
 		    <div id="inputContainer">
 			    <form id="loginForm" action="register.php" method="POST">
-			    	<h2>登入</h2>
+			    	<h2>會員登入</h2>
 			    	<p>
 			    		<?php echo $account->getError(Constants::$loginFailed);?>
 			    		<label for="loginUsername">使用者名稱:</label>
@@ -118,17 +118,17 @@ function getInputValue($name){
 				    	</p>
 				    	<button type="submit" name="registerButton">註冊</button>
 				    	<div class="hasAccountText">
-			    		<span id="hideRegister">已經有帳號了嗎? 按這裡登入.</span>
+			    		<span id="hideRegister">已經有帳號了嗎? 按這裡登入</span>
 			    	</div>
 				    </form> 
 		    </div>
 		    <div id="loginText">
-		    	<h1>Get great music, right now</h1>
-		    	<h2>Listen to loads of song for free</h2>
+		    	<h1>Just Music音樂串流平台</h1>
+		    	<h2>免費收聽各種風格的歌曲</h2>
 		    	<ul>
-		    		<li>Discover music you'll fall in love with</li>
-		    		<li>Create your own playlists</li>
-		    		<li>Follow artists to keep up to date</li>
+		    		<li>尋找你喜愛的音樂</li>
+		    		<li>建立自己的播放清單</li>
+		    		<li>追蹤喜愛歌手的最新資訊</li>
 		    	</ul>
 		    </div>
 	    </div>

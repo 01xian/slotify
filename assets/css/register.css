@@ -3,11 +3,9 @@ html,body{
 	padding: 0;
 	margin: 0;
 	height: 100%;
-
-
-
 }
-	#background{
+
+#background{
 	background-color: #000;
 	background-image: url('../images/bg.jpg');
 	background-position: center;
@@ -30,30 +28,28 @@ html,body{
 	margin: 0 auto;
 	position: relative;
 	max-width: 1024px;
-
 }
 
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff;
+    color: #e0e0e0;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #fff;
+   color: #e0e0e0;
    opacity:  1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #fff;
+   color: #e0e0e0;
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #fff;
+   color: #e0e0e0;
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
-   color:    #fff;
+   color: #e0e0e0;
 }
-
 ::placeholder { /* Most modern browsers support this now. */
-   color:    #fff;
+   color: #e0e0e0;
 }
 /*可以直接更改placeholder裡的顏色 
 https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
@@ -64,7 +60,7 @@ https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-c
 	width: 400px;
 	padding: 45px;
 	float: left ;
-	border-right: 1px solid #999;	
+	border-right: 1px solid rgb(190, 190, 190);	
 }
 
 #inputContainer h2 {
@@ -84,13 +80,14 @@ text-align:  center;
 }
 
 #inputContainer label {
-	color: #a0a0a0;
-	font-size: 13px;
+	color: #fff;
+	font-size: 14px;
 	margin-top: 15px;
 	display: block;
 }
 
-#inputContainer button {background-color: transparent;
+#inputContainer button {
+	background-color: transparent;
 	border: 1px solid #fff;
 	border-radius: 250px;
 	color: #fff;
@@ -101,14 +98,18 @@ text-align:  center;
 	height: 41px;
 	width: 100%;
 }
+
 #inputContainer button:hover{
 	cursor:  pointer;
 }
+
 .hasAccountText span {
 	font-weight: bold;
 	font-size: 12px;
+	text-align: center;
 	cursor: pointer;
 }
+
 .hasAccountText {
 	text-align: center;
 }
@@ -116,31 +117,35 @@ text-align:  center;
 #registerForm,#loginForm{
 	display: none;
 }
+
 #loginText{
 	padding: 45px;
 	display: table-cell;/* 可以讓它置中 */
 }
+
 #loginText h1{
-	color: #07d159;
-	font-size: 60px;
+	color: #d7c7ff;
+	font-size: 45px;
 	font-weight: bold;
 }
+
 #loginText h2{
-	margin:35px 0; 
+	margin:30px 0; 
 }
+
 #loginText ul{
 	padding: 0;
 }
 
 #loginText li{
-	font-size: 20px;
+	font-size: 19px;
 	list-style: none;
-	padding: 5px 30px;
+	padding: 4px 25px;
 	background: url(../images/icons/checkmark.png) no-repeat;	
 }
 
 #inputContainer .errorMessage{
-	color: #07d159;
+	color: #d7c7ff;
 	font-size: 12px;
 	display: block;
 }

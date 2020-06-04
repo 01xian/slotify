@@ -15,7 +15,7 @@ $artist = new Artist($con,$artistId)
 		<div class="artistInfo">
 			<h1 class="artistName"><?php echo $artist->getName();?></h1>
 			<div class="headerButtons">
-				<button class="button green" onclick="playFirstSong()">PLAY</button>
+				<button class="button green" onclick="playFirstSong()">播放</button>
 			</div>
 			
 		</div>
@@ -26,7 +26,7 @@ $artist = new Artist($con,$artistId)
 
 
 <div class="tracklistContainer borderBottom">
-	<h2>SONGS</h2>
+	<h2>音樂</h2>
 	<ul class="tracklist">
 
 		<?php
@@ -44,7 +44,7 @@ $artist = new Artist($con,$artistId)
         	echo "<li class='tracklistRow'>
 
 					<div class='trackCount'>
-					   <img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
+					   <img class='play' src='assets/images/icons/play.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
 					   <span class='trackNumber'>$i</span>
 					</div>
 
@@ -78,7 +78,7 @@ $artist = new Artist($con,$artistId)
 </div>
 
 <div class="gridViewContainer">
-	<h2>ALBUMS</h2>
+	<h2>專輯</h2>
 	
 	<?php
 	$albumQuery = mysqli_query($con,"SELECT * FROM albums WHERE artist='$artistId'");//ORDER BY RANDOM

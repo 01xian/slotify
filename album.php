@@ -16,8 +16,8 @@ $artist = $album-> getArtist();
 	</div>
 	<div class="rightSection">
 		<h2><?php echo $album-> getTitle();?></h2>
-		<p>By <?php echo $artist-> getName();?></p>
-		<p> <?php echo $album-> getNumberOfSongs();?> songs</p>
+		<p>歌手:<?php echo $artist-> getName();?></p>
+		<p> 共<?php echo $album-> getNumberOfSongs();?>首歌曲</p>
 	</div>
  	
 </div>
@@ -34,7 +34,7 @@ $artist = $album-> getArtist();
         	echo "<li class='tracklistRow'>
 
 					<div class='trackCount'>
-					   <img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
+					   <img class='play' src='assets/images/icons/play.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
 					   <span class='trackNumber'>$i</span>
 					</div>
 

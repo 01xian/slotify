@@ -35,14 +35,14 @@
     }
 
       public function getNumberOfSongs() {
-       $query = mysqli_query($this->con, "SELECT songId FROM playlistSongs WHERE playlistId='$this->id'");
+       $query = mysqli_query($this->con, "SELECT songId FROM playlistsongs WHERE playlistId='$this->id'");
        return mysqli_num_rows($query);
     }
 
 
       public function getSongIds() {
 
-            $query = mysqli_query($this->con, "SELECT songId FROM playlistSongs WHERE playlistId='$this->id'  ORDER BY playlistOrder ASC");
+            $query = mysqli_query($this->con, "SELECT songId FROM playlistsongs WHERE playlistId='$this->id'  ORDER BY playlistOrder ASC");
 
             $array = array();
 
@@ -56,7 +56,7 @@
 
         public static function getPlaylistsDropdown($con, $username) {
           $dropdown ='<select class="item playlist">
-                           <option value="">Add to playlist</option>';
+                           <option value="">添加到播放清單</option>';
           $query = mysqli_query($con , "SELECT id, name FROM playlists WHERE owner='$username'");
           while($row = mysqli_fetch_array($query)) {
             $id = $row['id'];

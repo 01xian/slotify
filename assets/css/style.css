@@ -3,20 +3,22 @@ html,body{
 	margin: 0;
 	height: 100%;
 }
+
 *{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "microsoft jhengHei";
+	color: rgb(61, 61, 68);
 	letter-spacing: 1px;
 }
+
 body {
-background-color: #181818;
-font-size: 14px;
-min-width: 720px
+	background-color: rgb(226, 224, 235);
+	font-size: 14px;
+	min-width: 720px
 }
 
 #nowPlayingBarContainer {
 	width: 100%;
-	background-color: #282828;
+	background-color: rgb(200, 197, 211);
 	bottom: 0;
 	position: fixed;
 	min-width: 620px;
@@ -39,7 +41,7 @@ min-width: 720px
 	position: relative;
 	margin-top: 16px; 
 }
-/*  */
+
 #nowPlayingCenter{
 	width: 40%;
 	max-width: 700px;
@@ -53,7 +55,7 @@ min-width: 720px
 	height: 57px;
 }
 
-.playerControls .buttonS{
+.playerControls .buttons{
 margin: 0 auto;
 display: table;/*可以拿來置中*/
 }
@@ -71,8 +73,8 @@ display: table;/*可以拿來置中*/
 
 .controlButton.play img,
 .controlButton.pause img{
-	width: 32px;
-	height: 32px;
+	width: 35px;
+	height: 35px;
 
 }
 
@@ -80,7 +82,7 @@ display: table;/*可以拿來置中*/
 	cursor: pointer;
 }
 .progressTime{
-	color: #a0a0a0;
+	color: #363447;
 	font-size: 11px;
 	min-width: 40px;
 	text-align: center;
@@ -97,14 +99,14 @@ display: table;/*可以拿來置中*/
 	cursor: pointer;
 }
 .progressBarBg{
-	background-color: #404040;
+	background-color: whitesmoke;
 	height: 4px;
 	width: 100%;
 	border-radius: 2px;
 }
 
 .progress {
-	background-color: #a0a0a0;
+	background-color: #363447;
 	height: 4px;
 	width: 0;
 	border-radius: 2px;
@@ -135,8 +137,9 @@ width: 100%;
 
 #nowPlayingLeft .trackInfo .artistName span{
 	font-size: 12px;
-	color: #a0a0a0;
+	color: #4f4d5f;
 }
+
 .volumeBar {
 	width: 180px;
 	position: absolute;
@@ -148,7 +151,6 @@ width: 100%;
 
 }
 
-
 #topContainer {
 	min-height: 100%;
 	width: 100%;
@@ -156,33 +158,36 @@ width: 100%;
 
 
 #navBarContainer {
-	background-color: #000;
+	background-color: rgb(163, 166, 184);
 	width: 220px;
 	height: 100vh;
 	position: fixed;
 	top: 0;
 	left: 0;
 }
+
 .navBar{
 	padding: 25px;
 	display: flex;
 	flex-direction: column;
 	-ms-flex-direction: column;/*for user on  Microsoft IE 瀏覽器 */
 }
+
 .logo{
 	margin-bottom: 14px;
 }
+
 .logo img{
 	width: 45px;
 }
 
 .navBar .group{
-	border-top: 1px solid #a0a0a0;
+	border-top: 1px solid #34495E;
 	padding: 10px 0;
 }
 .navItem{
 	padding: 10px 0;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 700;
 	display: block;
 	letter-spacing: 1px;
@@ -190,30 +195,36 @@ width: 100%;
 }
 
 .navItemLink{
-	color: #a0a0a0;
+	color: #34495E;
 	text-decoration: none;
 }
+
 .navItemLink:hover{
-	color: #ffffff;
+	color: #dfddf1;
 }
+
 .navItemLink .icon{
 	position: absolute;
 	right: 0;
 	top: 6px;
 	width: 25px;
 }
+
 #mainViewContainer{
 	margin-left: 220px;
 	padding-bottom: 90px;
 	width: calc(100% - 220px)
 }
+
 #mainContent{
 	padding: 0 20px;
 }
+
 .pageHeadingBig{
 	padding: 20px;
 	text-align: center;
 }
+
 .gridViewItem{
 	display: inline-block;
 	margin-right: 20px;
@@ -221,12 +232,12 @@ width: 100%;
 	max-width: 200px;
 	min-width: 150px;
 	margin-bottom: 20px;
-
 }
+
 .gridViewItem img{
 	width: 100%;
-
 }
+
 .gridViewInfo{
 	font-weight: 300;
 	text-align: center;
@@ -235,6 +246,7 @@ width: 100%;
 	overflow: hidden;/*字太多隱藏*/
 	white-space: nowrap;
 }
+
 .gridViewItem a{
 	text-decoration: none;
 }
@@ -250,27 +262,31 @@ width: 100%;
 	float: left;
 	max-width: 250px;
 }
+
 .entityInfo .leftSection img {
 width: 100%; 
 }
+
 .entityInfo .rightSection{
 	width: 70%;
 	float: left;
 	padding: 5px 10px 5px 40px;
 	box-sizing: border-box;
 }
+
 .entityInfo .rightSection h2{
 	margin-top: 0;
 }
 
 .entityInfo .rightSection p {
-	color: #939393;
+	color: #4f4d5f;
 	font-weight: 200;
 }
 
 .tracklist{
 	padding:0;
 }
+
 .tracklistRow{
 	height: 40px;
 	padding: 15px 10px;
@@ -278,18 +294,20 @@ width: 100%;
 }
 
 .tracklistRow span{
-	color: #939393;
+	color: #8985a1;
 	font-weight: 200;
 }
 
 .tracklistRow:hover{
-	background-color: #282828;
+	background-color: rgb(193, 182, 202, 0.7);
 
 }
+
 .tracklistRow .trackCount{
 	width: 8%;
 	float: left;
 }
+
 .tracklistRow .trackCount img{
 	width: 20px;
 	visibility: hidden;
@@ -297,20 +315,25 @@ width: 100%;
 	cursor: pointer;
 
 }
+
 .tracklistRow:hover .trackCount img{
 	visibility:visible;
 /*當tracklistRow被碰到時(hover),img出現*/
 }
+
 .tracklistRow .trackCount span{
 	visibility:visible;
 }
+
 .tracklistRow:hover .trackCount span{
 	visibility:hidden;
 }
+
 .tracklistRow .trackInfo{
 	width:  75%;
 	float:left ;
 }
+
 .tracklistRow .trackInfo span{
 	display: block;
 }
@@ -320,137 +343,152 @@ width: 100%;
 	float: left;
 	text-align: right;
 }
-.tracklistRow .trackOptions img{
-	width: 15px;
-	visibility: hidden;
 
+.tracklistRow .trackOptions img{
+	width: 20px;
+	visibility: hidden;
 }
+
 .tracklistRow:hover .trackOptions img{
 	visibility: visible;
 }
+
 .tracklistRow .trackDuration {
 	width: 12%;
 	float: left;
 	text-align: right; 
 }
+
  .tracklistRow .trackInfo .trackName {
- 	color:  #fff;
+ 	color:  #4f4d5f;
  	margin-bottom: 7px;
  }
+
  .artistInfo {
  	text-align: center;
  }
+
  .button{
- 	color: #fff;
+ 	color: #4f4d5f;
  	cursor: pointer;
  	margin-bottom: 10px;
  	background-color: transparent;
  	font-weight: 500;
  	letter-spacing: 2px;
- 	border: 2px solid #fff;
+ 	border: 2px solid #4f4d5f;
  	border-radius: 500px;
  	padding: 15px;
  	min-width: 130px;
+ 	font-size: 13px;
  }
 
  .button.green{
- 	background-color: #2ebd59;
- 	border-color: #2ebd59;
-
+ 	background-color: rgb(200, 197, 211);
+ 	border-color: rgb(200, 197, 211);
  }
+
  .borderBottom {
- 	border-bottom:  1px solid #939393;
+ 	border-bottom:  1px solid #8985a1;
  	margin-bottom: 20px;
-
  }
+
  .tracklistContainer h2,
  .gridViewContainer h2,
  .artistsContainer h2{
  	text-align: center;
  }
+
  [role='link'] {
  	cursor: pointer;
  }
 
  .searchContainer{
- 	background-color: #242424;
+ 	background-color: rgb(200, 197, 211);
  	padding: 20px 28px;
  }
+
  .searchContainer h4{
  	margin: 0;
  	font-weight: 300;
  }
+
 .searchContainer .searchInput {
 	width: 100%;
 	background-color: transparent;
 	border: none;
-	color: #fff;
+	color: #5f5e6d;
 	font-weight: 700;
-	font-size: 62px;
+	font-size: 40px;
 	letter-spacing: 2px;
 }
 
 input:focus{
 	outline: none;/*點選input時沒有邊框*/
 }
+
 .searchResultRow {
 	padding: 15px 10px;
 }
+
 .searchResultRow:hover {
-	background-color: #282828;
+	background-color: rgb(193, 182, 202, 0.7);
 }
+
 .searchResultRow .artistName span {
-	color: #fff;
+	color: #5f5e6d;
 }
+
 .noResults{
 	margin: 15px;
 	display: block;
-
 }
+
 .buttonItems .button{
 	display: block;
 	margin:0 auto 20px auto ;
 }
+
 .playlistsContainer {
 	padding: 10px 0;
 }
 
 .playlistImage {
-	border: 3px solid #282828;
+	/* border: 3px solid #282828; */
 	padding: 10px;
 }
 
-.lyric .word {
+.lyric .word{
 	display: none;
 	margin:40px auto ;
 	text-align: center;
 }
+
 .optionsMenu {
 	position: fixed;
-	background-color: #282828;
+	background-color: rgba(147, 126, 165, 0.7);
 	width: 200px;
-	border: 1px solid rgba(0,0,0,0.15);
+	border: 1px solid rgba(175, 168, 182, 0.459);
 	border-radius: 3px;
 	z-index: 1000;
 	display: none;
-
 }
+
 .optionsMenu .item {
 	width: 100%;
 	padding: 12px 20px;
 	box-sizing: border-box;
 	font-weight: 400;
-	color: rgba(147,147,147,0.8);
+	color: #4f4d5fc7;
 	cursor: pointer;
 	height: 40px;
-	background-color: #282828;
+	background-color: rgba(147, 126, 165, 0.7);
 	font-size: 14px;
 }
 
 .optionsMenu .item:hover {
-	color: #fff;
-	background-color: #333;
-	border-color: #333;
+	color: #dfddf1;
+	background-color: rgb(154, 135, 170);
+	border-color: rgb(154, 135, 170);
 }
 
 .optionsMenu select {
@@ -459,10 +497,8 @@ input:focus{
 	WebKit是目前主流的移動瀏覽器渲染引擎，主要設計是用來讓網頁瀏覽器繪製網頁。
 	WebKit目前作為AppleSafari及Google Chrome（直到版本27）等瀏覽器的主要引擎。*/
 	-moz-appearance:  none;/*和上面一樣,for Firefox*/
-
-
-	
 }
+
 .userInfo h1{
 	text-align: center;
 }
@@ -486,8 +522,8 @@ input:focus{
 .userDetails .container input[type="password"]{
 	height: 50px;
 	width: 100%;
-	background-color: #1f1f1f;
-	border:none;
+	background-color: rgb(200, 197, 211);
+	border: none;
 	font-size: 18px;
 	font-weight: 300;
 	padding: 0 20px; 
@@ -495,7 +531,7 @@ input:focus{
 }
 
 .userDetails .container .message{
-color: #2ebd59;
+color: rgb(107, 86, 117);
 font-weight: 300;
 }
 

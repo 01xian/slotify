@@ -237,28 +237,28 @@ $jsonArray = json_encode($resultArray);
 	<div id="nowPlayingCenter">
 		<div class="content playerControls">
 			<div class="buttons">
-				<button class="controlButton shuffle" title="Shuffle button">
-					<img src="assets/images/icons/Shuffle.png" alt="Shuffle" onclick="setShuffle()">
+				<button class="controlButton shuffle" title="隨機播放">
+					<img src="assets/images/icons/shuffle.png" alt="隨機撥放" onclick="setShuffle()">
 				</button>
 
-				<button class="controlButton previous" title="previous button" onclick="prevSong()">
-					<img src="assets/images/icons/previous.png" alt="previous">
+				<button class="controlButton previous" title="上一首" onclick="prevSong()">
+					<img src="assets/images/icons/previous.png" alt="上一首">
 				</button>
 
-				<button class="controlButton play" title="play button" onclick="playSong()">
-					<img src="assets/images/icons/play.png" alt="play">
+				<button class="controlButton play" title="播放" onclick="playSong()">
+					<img src="assets/images/icons/play.png" alt="播放">
 				</button>
 
-				<button class="controlButton pause" title="pause button" style="display: none;" onclick="pauseSong()">
-					<img src="assets/images/icons/pause.png" alt="pause">
+				<button class="controlButton pause" title="暫停" style="display: none;" onclick="pauseSong()">
+					<img src="assets/images/icons/pause.png" alt="暫停">
 				</button>
 
-				<button class="controlButton next" title="next button" onclick="nextSong()">
-					<img src="assets/images/icons/next.png" alt="next">
+				<button class="controlButton next" title="下一首" onclick="nextSong()">
+					<img src="assets/images/icons/next.png" alt="下一首">
 				</button>
 
-				<button class="controlButton repeat" title="repeat button" onclick="setRepeat()">
-					<img src="assets/images/icons/repeat.png" alt="repeat">
+				<button class="controlButton repeat" title="循環播放" onclick="setRepeat()">
+					<img src="assets/images/icons/repeat.png" alt="循環播放">
 				</button>
 			</div>
 			<div class="playbackBar">

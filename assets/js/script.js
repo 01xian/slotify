@@ -104,17 +104,19 @@ function removeFromPlaylist(button, playlistId) {
 
 function createPlaylist() {
 	console.log(userLoggedIn);
-	var popup = prompt("Please enter the name of your playlist");
+	var popup = prompt("請輸入歌單名稱");
 	if(popup != null) {
 		$.post("includes/handlers/ajax/createPlaylist.php",{ name:popup, username: userLoggedIn})
 		.done(function(error){
 			//js裡不能用mysql所以要用ajax
-			//do something when ajax returns
-			
-		  alert(error);
+			//do something when ajax sreturns
+			if(error = null) {
+				alert(error);
+				return;
+			}
 		  openPage("yourMusic.php");
 		
-		});
+		})
 	}
 
 }

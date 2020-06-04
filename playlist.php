@@ -19,9 +19,9 @@ $owner = new User($con, $playlist->getOwner());
 	</div>
 	<div class="rightSection">
 		<h2><?php echo $playlist->getName();?></h2>
-		<p>By <?php echo $playlist-> getOwner();?></p>
-		<p> <?php echo  $playlist-> getNumberOfSongs();?> songs</p>
-		<button class="button" onclick="deletePlaylist('<?php echo $playlistId;?>')">DELETE PLAYLIST </button>
+		<p>建立者:<?php echo $playlist-> getOwner();?></p>
+		<p>共<?php echo  $playlist-> getNumberOfSongs();?>首歌曲</p>
+		<button class="button" onclick="deletePlaylist('<?php echo $playlistId;?>')">刪除播放清單</button>
 
 	</div>
  	
@@ -39,7 +39,7 @@ $owner = new User($con, $playlist->getOwner());
         	echo "<li class='tracklistRow'>
 
 					<div class='trackCount'>
-					   <img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $playlistSong->getId(). "\", temPlaylist, true)'>
+					   <img class='play' src='assets/images/icons/play.png' onclick='setTrack(\"" . $playlistSong->getId(). "\", temPlaylist, true)'>
 					   <span class='trackNumber'>$i</span>
 					</div>
 
@@ -74,6 +74,6 @@ $owner = new User($con, $playlist->getOwner());
 <nav class="optionsMenu">
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername()); ?>
-	<div class="item" onclick="removeFromPlaylist(this,'<?php echo $playlistId; ?>')"> 從清單中移除 </div>
+	<div class="item" onclick="removeFromPlaylist(this,'<?php echo $playlistId; ?>')">從清單中移除 </div>
 </nav>
 

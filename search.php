@@ -11,8 +11,8 @@ else{
 
 ?>
 <div class="searchContainer">
-	<h4>Search for an artist, album or song</h4>
-	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="Start typing..." 
+	<h4>尋找歌手、專輯或音樂</h4>
+	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="請輸入要尋找的內容..." 
 	onfocus="this.value = this.value" > 
 
 </div>
@@ -39,13 +39,13 @@ else{
 
 <?php  if($term == "") exit(); ?>
 <div class="tracklistContainer borderBottom">
-	<h2>SONGS</h2>
+	<h2>音樂</h2>
 	<ul class="tracklist">
 
 		<?php
 		$songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '%$term%' LIMIT 10");/* % means anything after it,打前面就可以*/
 		if(mysqli_num_rows($songsQuery) == 0) {
-			echo "<span class='noResults'>No songs found matching". $term ."</span>";
+			echo "<span class='noResults'>找不到與". $term ."相關的音樂</span>";
 		}
 
 		$songIdArray = array();
@@ -63,7 +63,7 @@ else{
         	echo "<li class='tracklistRow'>
 
 					<div class='trackCount'>
-					   <img class='play' src='assets/images/icons/play-white.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
+					   <img class='play' src='assets/images/icons/play.png' onclick='setTrack(\"" . $albumSong->getId(). "\", temPlaylist, true)'>
 					   <span class='trackNumber'>$i</span>
 					</div>
 
@@ -96,12 +96,12 @@ else{
 	</ul>
 </div>  
 <div class="artistsContainer borderBottom">
-	<h2>ARTISTS</h2>
+	<h2>歌手</h2>
 	<?php
 	$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '%$term%' LIMIT 10");
 
 	if(mysqli_num_rows($songsQuery) == 0) {
-	  echo "<span class='noResults'>No artists found matching". $term ."</span>";
+	  echo "<span class='noResults'>找不到與". $term ."相關的歌手</span>";
 		}
 		while($row = mysqli_fetch_array($artistsQuery)) {
 			$artistFound = new Artist($con, $row['id']);
@@ -122,12 +122,12 @@ else{
 </div>  
 
 <div class="gridViewContainer">
-	<h2>ALBUMS</h2>
+	<h2>專輯</h2>
 	
 	<?php
 	$albumQuery = mysqli_query($con,"SELECT * FROM albums WHERE title LIKE '%$term%' LIMIT 10");
 	if(mysqli_num_rows($albumQuery) == 0) {
-	  echo "<span class='noResults'>No artists found matching". $term ."</span>";
+	  echo "<span class='noResults'>找不到與". $term ."相關的專輯</span>";
 		}
 	while($row = mysqli_fetch_array ($albumQuery)) {
 		echo "<div class='gridViewItem'>
