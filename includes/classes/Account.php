@@ -4,7 +4,7 @@
   	private $con;
   	private $errorArray;
   	public function __construct($con){
-  		$this->con = $con;//把private變public???
+  		$this->con = $con;
   		$this->errorArray=array();
   		//???
   	}
@@ -32,7 +32,7 @@
   		if(empty($this->errorArray) == true) {
   			//Insert into db
   			return $this->insertUserDetails($un,$fn,$ln,$em,$pw);
-  		}//$this->:代替物件名稱去呼叫一個方法???
+  		}
   		else{
   			return false;
   		}
