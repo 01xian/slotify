@@ -20,7 +20,7 @@ else{
 
 	<html>
 	  <head>
-	    <title>Welcome to Slotify!</title>
+	    <title>Welcome to JustMusic!</title>
 	    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	    <script src="assets/js/script.js"></script>

@@ -12,10 +12,7 @@ if (isset($_POST['playlistId']) && isset($_POST['songId'])){
     $row = mysqli_fetch_array($orderIdQuery);
     $order = $row['playlistOrder'];
 
-
-   
-
-        $songsQuery = mysqli_query($con, "SELECT * FROM playlistsongs WHERE songId = '$songId' AND playlistId = '$playlistId'   ");
+        $songsQuery = mysqli_query($con, "SELECT * FROM playlistsongs WHERE songId = '$songId' AND playlistId = '$playlistId'");
         if(mysqli_num_rows($songsQuery) == 0) {
              $query = mysqli_query($con,"INSERT INTO playlistsongs VALUES('','$songId','$playlistId','$order')");
         }
