@@ -286,10 +286,17 @@ $jsonArray = json_encode($resultArray);
 			<div class="progressBar">
 				<div class="progressBarBg">
 					<div class="progress"></div>
+
+
 				</div>	
+
 			</div>
+			<div class="ben">Music:Bensound.com</div>
+
 
 		</div>
+
+
 		
 	</div>
 	

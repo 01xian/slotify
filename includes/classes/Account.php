@@ -49,9 +49,9 @@
   	}
   	private function insertUserDetails($un,$fn,$ln,$em,$pw){
   		$encryptedPw = md5($pw);//encrypted加密的
-  		$profilePic = "assets/images/profile-pics/head_emerald.png";//???
+  		$profilePic = "assets/images/profile-pics/head_emerald.png";
   		$date = date("Y-m-d");
-  		$result =mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profile-Pic') ");
+  		$result =mysqli_query($this->con, "INSERT INTO users VALUES ('', '$un', '$fn', '$ln', '$em', '$encryptedPw', '$date', '$profilePic') ");
   		return $result;
 
   	}
@@ -74,13 +74,13 @@
 
   	
   		private function validateFirstName($fn){
-  			if(strlen($fn) > 25 || strlen($fn) < 2){
+  			if(strlen($fn) > 20 || strlen($fn) < 2){
   			array_push($this->errorArray, Constants::$firstNameCharacters);
   			return;
 
   		}}
   		private function validateLastName($ln){
-  			if(strlen($ln) > 25 || strlen($ln) < 2){
+  			if(strlen($ln) > 20 || strlen($ln) < 2){
   			array_push($this->errorArray, Constants::$lastNameCharacters);
   			return;
 

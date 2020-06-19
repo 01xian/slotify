@@ -109,7 +109,7 @@ function createPlaylist() {
 		$.post("includes/handlers/ajax/createPlaylist.php",{ name:popup, username: userLoggedIn})
 		.done(function(error){
 			//js裡不能用mysql所以要用ajax
-			//do something when ajax sreturns
+			//do something when ajax returns
 			if(error = null) {
 				alert(error);
 				return;

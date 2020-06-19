@@ -2,7 +2,7 @@
 include("includes/includedFiles.php");
 if(isset($_GET['term'])) {
 	$term = urldecode($_GET['term']);
-	/*解碼的動作。(改善空白會變%20的問題)*/
+	/*url編碼解碼   。(ex:空白%20)*/
 
 }
 else{
@@ -13,7 +13,7 @@ else{
 <div class="searchContainer">
 	<h4>尋找歌手、專輯或音樂</h4>
 	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="請輸入要尋找的內容..." 
-	onfocus="this.value = this.value" > 
+	 > 
 
 </div>
 <script>

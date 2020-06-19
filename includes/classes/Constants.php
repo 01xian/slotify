@@ -6,8 +6,8 @@ class Constants {
 	public static $emailInvalid = "無效的Email!";
 	public static $emailsDoNotMatch = "確認email不相同!";
 	public static $emailTaken = "email已經被使用!";
-	public static $lastNameCharacters = "你的名字長度限制為2~25字";
-	public static $firstNameCharacters = "你的姓氏長度限制為2~25字";
+	public static $lastNameCharacters = "你的名字長度限制為10字";
+	public static $firstNameCharacters = "你的姓氏長度限制為10字";
 	public static $usernameCharacters = "你的帳號長度限制為2~25字";
 	public static $usernameTaken = "使用者名稱已經被使用過了!";
 	

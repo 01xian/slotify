@@ -14,7 +14,7 @@
 		<input type="password" class="newPassword1" name="newPassword1" placeholder="請輸入新設定的密碼" >
 		<input type="password" class="newPassword2" name="newPassword2" placeholder="確認新輸入的密碼" >
 		<span class="message"></span>
-		<button class="button" onclick="updatePassword('oldPassword','newPassword1','newPassword2')">SAVE</button>	
+		<button class="button" onclick="updatePassword('oldPassword','newPassword1','newPassword2')">儲存</button>	
 	</div>
 	
 </div>

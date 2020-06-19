@@ -16,9 +16,9 @@ html,body{
 }
 
 #loginContainer * {
-	color: #fff;
+	color: #f7ffe5;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-weight: normal;
+    font-weight: 900;
 	line-height: 1em;
 	box-sizing: border-box;
 }
@@ -33,23 +33,29 @@ html,body{
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #e0e0e0;
+    
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color: #e0e0e0;
    opacity:  1;
+   
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
    color: #e0e0e0;
    opacity:  1;
+   
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #e0e0e0;
+   
 }
 ::-ms-input-placeholder { /* Microsoft Edge */
    color: #e0e0e0;
+   
 }
 ::placeholder { /* Most modern browsers support this now. */
    color: #e0e0e0;
+   
 }
 /*可以直接更改placeholder裡的顏色 
 https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css */
@@ -61,10 +67,12 @@ https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-c
 	padding: 45px;
 	float: left ;
 	border-right: 1px solid rgb(190, 190, 190);	
+	
 }
 
 #inputContainer h2 {
 text-align:  center;
+
 }
 
 #inputContainer input[type="text"],
@@ -77,6 +85,7 @@ text-align:  center;
 	height: 27px;
 	line-height: 27px;
 	width: 100%;
+	
 }
 
 #inputContainer label {
@@ -84,6 +93,7 @@ text-align:  center;
 	font-size: 14px;
 	margin-top: 15px;
 	display: block;
+	
 }
 
 #inputContainer button {
@@ -97,6 +107,7 @@ text-align:  center;
 	margin: 20px auto;
 	height: 41px;
 	width: 100%;
+	
 }
 
 #inputContainer button:hover{
@@ -104,7 +115,7 @@ text-align:  center;
 }
 
 .hasAccountText span {
-	font-weight: bold;
+    
 	font-size: 12px;
 	text-align: center;
 	cursor: pointer;
@@ -124,13 +135,15 @@ text-align:  center;
 }
 
 #loginText h1{
-	color: #d7c7ff;
+	color:#fff;
 	font-size: 45px;
-	font-weight: bold;
+	font-weight: 700;
+
 }
 
 #loginText h2{
 	margin:30px 0; 
+	
 }
 
 #loginText ul{
@@ -141,12 +154,14 @@ text-align:  center;
 	font-size: 19px;
 	list-style: none;
 	padding: 4px 25px;
-	background: url(../images/icons/checkmark.png) no-repeat;	
+	background: url(../images/icons/checkmark.png) no-repeat;
+		
 }
 
 #inputContainer .errorMessage{
 	color: #d7c7ff;
 	font-size: 12px;
 	display: block;
+	
 }
 

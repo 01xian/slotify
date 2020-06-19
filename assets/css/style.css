@@ -111,7 +111,8 @@ display: table;/*可以拿來置中*/
 	width: 0;
 	border-radius: 2px;
 }
-
+.ben{
+	font-size: 3px;}
 .playbackBar .progressBar {
 	margin-top:  3px;
 }
@@ -534,7 +535,6 @@ input:focus{
 color: rgb(107, 86, 117);
 font-weight: 300;
 }
-
 
 
 

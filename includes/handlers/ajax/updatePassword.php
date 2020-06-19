@@ -7,13 +7,13 @@ if(!isset($_POST['username'])) {
 }
 
 
-if(!isset($_POST['oldPassword']) || !isset($_POST['newPassword1']) || !isset($_POST['newPassword1'])){
-	echo "Not all password have been set";
+if(!isset($_POST['oldPassword']) || !isset($_POST['newPassword1']) || !isset($_POST['newPassword2'])){
+	echo "請輸入所有欄位";
 	exit();
 }
 
 
-if($_POST['oldPassword'] == "" || $_POST['newPassword1'] == "" || $_POST['newPassword1'] == ""){
+if($_POST['oldPassword'] == "" || $_POST['newPassword1'] == "" || $_POST['newPassword2'] == ""){
 	echo "不能有空格唷!";
 	exit();
 }
